@@ -1,0 +1,33 @@
+{
+    "name": "send-otp",
+    "version": "1.2.8",
+    "description": "Integrate sendotp",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha --reporter spec",
+        "start": "node app"
+    },
+
+    "keywords": [
+        "SendOtp",
+        "Flow",
+        "Node",
+        "API"
+    ],
+    "author": "manoj kumar",
+    "license": "ISC",
+
+    "dependencies": {
+        "express": "^4.16.2",
+        "request": "^2.83.0",
+        "sendotp": "^1.2.8"
+    },
+
+    "directories": {
+        "test": "test"
+    },
+    "devDependencies": {
+        "mocha": "*",
+        "nock": "*"
+    }
+}
