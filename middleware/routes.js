@@ -23,26 +23,6 @@ function routes(app, io) {
         res.render('index');
     });
 
-    app.post('/login', function(req, res) {
-        sessionInfo = req.session;
-        const data = {
-            "email": req.body.email,
-            "password": req.body.password
-        }
-
-        helper.isUserExists(data, function(result) {
-
-            if (result.isUserExists === true) {
-                sessionInfo.sessionData = {
-                    userID: result.id
-                };
-            }
-
-            res.writeHead(200, { 'Content-Type': 'text/plain' });
-            res.end(JSON.stringify(result));
-        });
-
-    });
 
     app.post('/register', function(req, res) {
         sessionInfo = req.session;
@@ -135,11 +115,7 @@ function routes(app, io) {
     });
 
 
-    app.post('/logout', function(req, res) {
-        sessionInfo = req.session;
-        sessionInfo.sessionData = null;
-        res.end();
-    });
+
 
     app.get('/getBalance', function(req, res) {
         helper.getBalance(function(result) {

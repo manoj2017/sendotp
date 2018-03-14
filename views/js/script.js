@@ -34,35 +34,6 @@ app.service('runajax', ['$http', function($http) {
 }]);
 
 app.controller('index', function($scope, $window, runajax) {
-    /*---------------------------------------------------------------------------------
-    Call to Login
-    ---------------------------------------------------------------------------------*/
-    $scope.login = function() {
-        if (typeof $scope.emailLogin == "undefined" || $scope.emailLogin == "") {
-
-            alert(`Enter Login Email`);
-
-        } else if (typeof $scope.passwordLogin == "undefined" || $scope.passwordLogin == "") {
-
-            alert(`Enter Login Password`);
-
-        } else {
-            var urlData = {
-                url: '/login',
-                data: {
-                    email: $scope.emailLogin,
-                    password: $scope.passwordLogin
-                }
-            }
-            runajax.runajax_function(urlData, function(userData) {
-                if (userData.isUserExists) {
-                    $window.location.href = "/#/home?id=" + userData.id;
-                } else {
-                    alert(`Not Done Login Failed`);
-                }
-            });
-        }
-    };
 
     /*---------------------------------------------------------------------------------
         Call to Register
