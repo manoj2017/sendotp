@@ -1,0 +1,11 @@
+.registerBox,
+.loginBox,
+.sendOtpSection,
+.verifyOtpSection{
+	padding: 20px 25px;
+}
+
+.sendOtpSection,
+.verifyOtpSection{
+	display: none;
+}

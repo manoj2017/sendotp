@@ -1,33 +1,20 @@
 {
     "name": "send-otp",
-    "version": "1.2.8",
-    "description": "Integrate sendotp",
+    "version": "0.0.1",
+    "description": "NodeJs-Sms-Verification",
     "main": "index.js",
     "scripts": {
-        "test": "mocha --reporter spec",
-        "start": "node app"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server"
     },
-
-    "keywords": [
-        "SendOtp",
-        "Flow",
-        "Node",
-        "API"
-    ],
     "author": "manoj kumar",
     "license": "ISC",
-
     "dependencies": {
-        "express": "^4.16.2",
-        "request": "^2.83.0",
-        "sendotp": "^1.2.8"
-    },
-
-    "directories": {
-        "test": "test"
-    },
-    "devDependencies": {
-        "mocha": "*",
-        "nock": "*"
+        "body-parser": "^1.15.0",
+        "ejs": "^2.4.1",
+        "express": "^4.13.4",
+        "express-session": "^1.13.0",
+        "mongodb": "^2.1.21",
+        "msg91": "0.0.6"
     }
 }

@@ -1,0 +1,25 @@
+<div class="container">
+
+    <header>
+        <h2>Hello {{ username }}</h2>
+        <a ng-click="logout()">logout</a>
+    </header>
+
+    <div class="information">
+        <h3>Your mobile number ******{{ mobile }} is {{ isVerified === true ? "Verified" : "not Verified"}}</h3>
+    </div>
+
+    <div id="otpSection" class="otpSection">
+        <button class="btn btn-primary sendOtp" id="sendOtp" ng-click="sendOTP()">SendOTP</button>
+
+        <div id="sendOtpSection" class="sendOtpSection">
+            <button class="btn btn-primary sendOtp" id="sendOtp" ng-click="sendOTP()">SendOTP</button>
+        </div>
+        <div id="verifyOtpSection" class="verifyOtpSection">
+            <input type="number" class="form-control" id="otp" placeholder="Enter OTP" ng-model="enteredOtp">
+            <br/>
+            <button class="btn btn-primary verifyOtp" id="verifyOtp" ng-click="verifyOTP()">Verify OTP</button>
+        </div>
+    </div>
+
+</div>
